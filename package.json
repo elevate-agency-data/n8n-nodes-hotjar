@@ -1,0 +1,55 @@
+{
+  "name": "n8n-nodes-hotjar",
+  "version": "1.0.0",
+  "description": "Node N8N to interact with Hotjar",
+  "license": "MIT",
+  "homepage": "https://github.com/elevate-agency-data/n8n-nodes-hotjar",
+  "keywords": [
+    "n8n-community-node-package",
+    "hotjar",
+    "hotjar-node",
+    "hotjar-n8n",
+    "hotjar-n8n-node",
+    "hotjar-n8n-node-package"
+  ],
+  "author": {
+    "name": "elevate_agency",
+    "email": "conseil@elevate-agency.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elevate-agency-data/n8n-nodes-hotjar.git"
+  },
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+		"strict": true,
+    "credentials": [
+      "dist/credentials/HotjarApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Hotjar/Hotjar.node.js"
+    ]
+  },
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
